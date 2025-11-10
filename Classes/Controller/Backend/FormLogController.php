@@ -73,7 +73,7 @@ class FormLogController extends ActionController
             'filters' => $filters,
             'pagination' => new SimplePagination($paginator),
             'currentPageNumber' => $currentPageNumber,
-            'dateFormat' => $this->settings['dateTimeFormat'] ?: \DateTime::W3C,
+            'dateFormat' => $this->settings['dateTimeFormat'] ?? \DateTime::W3C,
             'isoDateFormat' => \DateTime::W3C,
             'daterangepickerTranslations' => $this->prepareDaterangepickerTranslations(),
             'inlineSettings' => [
